@@ -1,0 +1,557 @@
+/*小米3d广告区域*/
+.banner{
+    margin:20px auto;
+    width: 1340px;
+    height:620px;
+    /*border: 1px solid blue;*/
+    perspective: 2000px;
+}
+.item{
+    width: 1340px;
+    height:620px;
+    /*border: 1px solid red;*/
+    position: relative;
+    transform-style:preserve-3d;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.item>div{
+    width: 1220px;
+    height: 500px;
+    position: absolute;
+    border-radius: 20px;
+    left:50%;
+    top:50%;
+    margin-left:-610px;
+    margin-top:-250px;
+    overflow: hidden;
+    /*border: 1px solid red;*/
+}
+.item1>.shadow{
+    background: url("../images/shadow.png") center no-repeat;
+    width: 1340px;
+    height: 620px;
+    left:50%;
+    top:50%;
+    margin-left:-670px;
+    margin-top:-310px;
+    /*opacity: 0;*/
+}
+.item1 .bottom{
+    background:url("../images/banner1-b.png") center no-repeat ;
+}
+.item1 .center{
+    background:url("../images/banner1-c.png") center no-repeat;
+}
+.item1 .top{
+    background:url("../images/banner1-t.png") center  no-repeat;
+}
+/*旋转轮播图部分*/
+@charset "UTF-8";
+/*初始化  reset*/
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;color: #666;}
+ol,ul{list-style:none}
+a{text-decoration:none}
+fieldset,img{border:0;vertical-align:top;}
+a,input,button,select,textarea{outline:none;}
+a,button{cursor:pointer;}
+.wrap{
+    width: 1200px;
+    margin:10px auto;
+}
+.slide{
+    height: 500px;
+    position:relative;
+}
+.slide li{
+    position:absolute;
+    left:200px;
+    top:0;
+}
+.slide li img{
+    width: 100%;
+}
+.arrow{
+    opacity:0;
+}
+.prev,.next{
+    width: 76px;
+    height: 112px;
+    position:absolute;
+    top:50%;
+    margin-top:-56px;
+    background:url("../images/prev.png") no-repeat;
+    z-index:99;
+}
+.next{
+    right:0;
+    background:url("../images/next.png");
+}
+/*突出高亮显示部分*/
+.wrap11{
+    background-color: #000;
+    padding:15px;
+}
+.wrap1{
+    width: 630px;
+    height: 394px;
+    margin:100px auto 0;
+    background:#000;
+    overflow:hidden;
+    padding:10px 0 0 10px;
+    border: 1px solid #fff;
+}
+.wrap1 li{
+    display: block;
+    width: 200px;
+    height: 186px;
+    float:left;
+    margin:0 10px 10px 0;
+}
+.wrap1 img{
+    display:block;
+    border:0;
+}
+/*手风琴部分*/
+.accor{
+    width: 1150px;
+    height: 400px;
+    margin:50px auto;
+    border:1px solid red;
+    overflow:hidden;
+}
+.accor ul{
+    /*此处将ul的宽度减小来了些，是为了避免引变大盒子速度慢，而变小盒子速度快，造成ul大盒子有时可能没有来得及被填充，而出现白色区域。*/
+    width: 1300px;
+    list-style:none;
+}
+.accor ul li{
+    width: 240px;
+    height: 400px;
+    float:left;
+}
+/*淘宝部件部分*/
+.wrapper{
+    width: 298px;
+    height: 248px;
+    margin:143px 165px 0;
+    border:1px solid pink;
+    overflow:hidden;
+}
+#left11,#center,#right11{
+    float:left;
+}
+#left11 li,#right11 li{
+    background: url("../images/lili.jpg") repeat-x;
+    width: 48px;
+    height: 28px;
+    display: block;
+}
+#left11 li a, #right11 li a{
+    width: 48px;
+    height: 27px;
+    line-height:27px;
+    display:block;
+    border-bottom:1px solid pink;
+    text-align:center;
+    color:black;
+}
+#left11 li a:hover, #right11 li a:hover{
+    background-image: url("../images/abg.gif");
+}
+#center {
+    border-left: 1px solid pink;
+    border-right: 1px solid pink;
+}
+/*淘宝部件部分*/
+.box12{
+    width: 350px;
+    height: 350px;
+    position:relative;
+    margin:40px 9px -24px 147px;
+    border: 1px solid #ccc;
+}
+.small{
+    position:relative;
+}
+.mask{
+    width: 175px;
+    height: 175px;
+    background:rgba(255,255,0,0.4);
+    position:absolute;
+    left:0;
+    top:0;
+    cursor:move;
+    display:none;
+}
+.big{
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top:0;
+    left:360px;
+    border: 1px solid #ccc;
+    overflow:hidden;
+    display:none;
+}
+.small img,.big img{
+    vertical-align:top;
+}
+/*请购倒计时部分*/
+.release {
+    width: 1210px;
+    margin: 100px 20px 20px 20px;
+    color: red;
+    text-align: center;
+    font: 600 30px/30px "simsun";
+    position: absolute;
+    top:10px;
+    right:-156px;
+}
+/*下拉菜单部分*/
+.wrap22{
+    width: 330px;
+    height: 30px;
+    /*margin:100px auto 0;*/
+    position: absolute;
+    top:450px;
+    left:750px;
+    padding-left:10px;
+    background-image:url("../images/bg.jpg");
+}
+.wrap22 li{
+    background-image: url("../images/libg.jpg");
+}
+.wrap22>ul>li{
+    float:left;
+    margin-right:10px;
+    position:relative;
+}
+.wrap22 a{
+    width: 100px;
+    height: 30px;
+    line-height:30px;
+    display:block;
+    color:#000;
+    text-decoration:none;
+    text-align:center;
+}
+.wrap22 li ul{
+    position:absolute;
+    top:30px;
+    display:none;
+}
+/*媒体控制条部分*/
+figcaption{
+    text-align:center;
+    font-size:20px;
+    font-family:"MIcrosoft Yahei";
+}
+.player{
+    width: 720px;
+    height: 360px;
+    margin:100px auto;
+    background:url("images/loading.gif") no-repeat #000 center;
+    background-size:auto 100%;
+    position:relative;
+}
+video{
+    height:100%;
+    display:block;
+    margin:0 auto;
+}
+.controls{
+    width: 700px;
+    height: 40px;
+    background-color: rgba(255,255,0,0.3);
+    position:absolute;
+    left:10px;
+    bottom:10px;
+    border-radius:5px;
+}
+.switch{
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    left:10px;
+    top:10px;
+    line-height:20px;
+    font-size:18px;
+    text-align:center;
+    color:yellow;
+    cursor:pointer;
+}
+.progress{
+    width: 432px;
+    height: 10px;
+    position:absolute;
+    left:50px;
+    top:15px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius:4px;
+    overflow:hidden;
+}
+.curr-progress{
+
+    height:100%;
+    background-color: #ffffff;
+    width: 50%;
+}
+.time{
+    width: 120px;
+    height: 20px;
+    position:absolute;
+    left:505px;
+    top:10px;
+    font-size:12px;
+    color:#fff;
+    text-align:center;
+    line-height:20px;
+}
+.extend{
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    right:14px;
+    top:10px;
+    font-size:18px;
+    color:yellow;
+    text-align:center;
+    line-height:20px;
+}
+/*360弹出广告部分*/
+.ad{
+    width: 230px;
+    height: 120px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    background:url("../images/ad.jpg");
+    display:none;
+}
+.ad span{
+    position:absolute;
+    top:0;
+    right:0;
+    width: 40px;
+    height: 18px;
+    background:url("../images/h.jpg");
+    cursor:pointer;
+}
+/*立方体部分*/
+.box-li{
+    width: 250px;
+    height: 250px;
+    border: 1px dashed red;
+    margin:100px auto;
+    position: relative;
+    border-radius: 50%;
+
+    /* 让子盒子保持3d效果*/
+
+    transform-style:preserve-3d;
+
+    /*transform:rotateX(30deg) rotateY(-30deg);*/
+
+    animation:gun 8s linear infinite;
+}
+
+.box-li>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    line-height: 250px;
+    font-size:60px;
+    color:#daa520;
+}
+
+.box-li .left{
+    background-color: rgba(255,0,0,0.3);
+    /* 变换中心*/
+    transform-origin: left;
+    /* 变换*/
+    transform:rotateY(90deg) translateX(-125px);
+}
+
+.box-li .right{
+    background:rgba(0,0,255,0.3);
+    transform-origin: right;
+    /* 变换*/
+    transform:rotateY(90deg) translateX(125px);
+}
+
+.box-li .forward{
+    background: rgba(255,255,0,0.3);
+    transform:translateZ(125px);
+}
+
+.box-li .back{
+    background: rgba(0,255,255,0.3);
+    transform:translateZ(-125px);
+}
+
+.box-li .up{
+    background: rgba(255,0,255,0.3);
+    transform:rotateX(90deg) translateZ(125px);
+}
+
+.box-li .down{
+    background: rgba(99,66,33,0.3);
+    transform:rotateX(-90deg) translateZ(125px);
+}
+
+@keyframes gun {
+    0%{
+        transform:rotateX(0deg) rotateY(0deg);
+    }
+
+    100%{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
+/*旋转音乐盒部分1*/
+.liti11{
+    background-color: #999
+}
+.liti{
+    width: 900px;
+    margin:100px auto;
+    height:80px;
+    position: relative;
+}
+.liti::after ,.liti::before{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height:80px;
+    background-color: #ccc;
+    left:-100px;
+
+}
+
+.liti::after{
+    /* left 设置auto，左边的left 属性 不在控制 left 值 */
+    left:auto;
+    right:-100px;
+}
+
+.liti li{
+    float: left;
+    width: 180px;
+    height: 80px;
+
+}
+
+.liti li span{
+    float: left;
+    height:80px;
+}
+
+.liti li .liti-left,.liti li .liti-right{
+    width: 30px;
+    height:100%;
+    background-color: #ccc;
+
+}
+
+.liti li .liti-center{
+    width:120px;
+    height:80px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    font-family: "Microsoft Yahei";
+
+}
+
+.liti li:hover .liti-left{
+    transform-origin: left;
+    transform:skew(0deg,-30deg);
+    background-color: #c1c1c1;
+    box-shadow: 10px 20px 20px  -10px #666;
+}
+
+.liti li:hover .liti-center{
+    transform:translateY(-17px);
+    text-shadow: 5px 5px 3px #666;
+    box-shadow: 0 20px 20px -10px #666;
+}
+
+.liti li:hover .liti-right{
+    transform-origin: right;
+    transform:skew(0deg,30deg);
+    background-color: #c1c1c1;
+    box-shadow: -10px 20px 20px  -10px #666;
+}
+/*音乐盒部分2*/
+
+.liti-music{
+    width: 300px;
+    height: 300px;
+    /*border: 1px solid #000;*/
+    margin:0 auto;
+    position: relative;
+}
+
+.liti-music::before,.liti-music::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: red;
+    background: url("../images/musicb.jpg") no-repeat;
+    border: 1px solid #ccc;
+
+}
+
+.liti-music::after{
+    transition:transform 1s;
+    /* 变换中心*/
+    transform-origin: bottom;
+    background-image: url("../images/musict.jpg");
+}
+.liti-music:hover::after{
+    transform:rotateX(180deg);
+}
+/*音乐盒部分3*/
+.qianbao{
+    width: 300px;
+    height: 300px;
+    /*border: 1px solid #000;*/
+    margin:-300px 10px 10px 900px;
+    position: relative;
+}
+
+.qianbao::after,.qianbao::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: pink;
+    background: url("../images/bg.png") no-repeat left top;
+    transition:all 1s;
+    /* 让盒子的背面隐藏*/
+    backface-visibility: hidden;
+
+}
+.qianbao::before{
+    transform:rotateY(-180deg);
+}
+
+.box::after{
+    /*left:350px;*/
+    background-position: right top;
+}
+
+.qianbao:hover::before{
+    transform:rotateY(0deg);
+}
+
+.qianbao:hover::after{
+    transform:rotateY(180deg);
+}
